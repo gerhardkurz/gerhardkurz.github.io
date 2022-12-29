@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Homepage of Gerhard Kurz</title>
+<meta name="generator" content="Jekyll v4.3.1" />
+<meta property="og:title" content="Homepage of Gerhard Kurz" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://gerhardkurz.github.io/research-roboticbeatingheartsurgery/" />
+<meta property="og:url" content="https://gerhardkurz.github.io/research-roboticbeatingheartsurgery/" />
+<meta property="og:site_name" content="Homepage of Gerhard Kurz" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Homepage of Gerhard Kurz" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Homepage of Gerhard Kurz","url":"https://gerhardkurz.github.io/research-roboticbeatingheartsurgery/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://gerhardkurz.github.io/feed.xml" title="Homepage of Gerhard Kurz" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Homepage of Gerhard Kurz</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/code/">Code</a><a class="page-link" href="/publications/">Publications</a><a class="page-link" href="/research/">Research</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    <p>Beating heart surgery is very difficult to perform because the surgeon has to work on the heart while its surface is rapidly moving. A remote-controlled robot can be employed to automatically compensate for the motion of the beating heart. By showing a stabilized image to the surgeon, the illusion of operating on a still heart can be created.</p>
+
+<p>The research on this problem was carried out in cooperation with the <a href="https://www.heidelberg-university-hospital.com/home/">Heidelberg University Hospital</a> as project <a href="http://grk1126.de/index.php?id=30">T2</a> of the Research Training Group 1126 on “Intelligent Surgery” <a href="http://grk1126.de">GRK 1126</a>). An article on my work has appeared in the <a href="../images/press/Newsletter_APR_1-2015_web.pdf">APR Newsletter 2015</a>.</p>
+
+<p><img src="../images/researc/../research/concept.png" width="500" /></p>
+
+<h1 id="image-stabilization">Image Stabilization</h1>
+<p>The goal of image stabilization consist in creating a video stream of the beating heart where the movement of the heart has been removed. However, changes to texture as caused by manipulation by the surgeon are supposed to be retained. Thus, we want to combine the shape of the heart from a certain reference frame with the current texture information.</p>
+
+<p><img src="../images/research/imagestab_problem.png" width="500" /></p>
+
+<p>I have published several papers on this problem, which focus on different issues.</p>
+
+<ul>
+  <li>2D interpolation <a class="citation" href="#CURAC12_Kurz">(Kurz &amp; Hanebeck, 2012)</a></li>
+  <li>2D and 3D interpolation <a class="citation" href="#Fusion14_Kurz">(Kurz &amp; Hanebeck, 2014)</a></li>
+  <li>Evaluation methodology <a class="citation" href="#CURAC14_Kurz">(Kurz et al., 2014)</a></li>
+</ul>
+
+<p>This video illustrates some of my results.</p>
+
+<video src="../images/research/sequenz_01_8.mp4" width="700" controls=""></video>
+
+<figure style="float:right;">
+  <img src="../images/research/imu_img_2031.jpg" alt="wn" width="150" />
+  <figcaption>Small IMU for use in beating heart surgery.</figcaption>
+</figure>
+
+<h1 id="application-of-kinect-and-imu-sensors">Application of Kinect and IMU Sensors</h1>
+<p>In literature, most methods for beating heart tracking rely on cameras exclusively. Occasionally, other sensors, such as ECG or a blood pressure sensor are used. A key to achieving accurate, reliable, and robust tracking is the fusion of information from multiple sensors that complement each other and that can compensate for each others weaknesses.</p>
+
+<p>Motivated by the availability of novel sensors, I investigated the applicability of small inertial measurement units (IMUs) contained in a single chip to the problem of beating heart tracking. Furthermore, I performed experiments with a Microsoft Kinect camera based on the structured light measurement principle. Both types of sensors showed promising results <a class="citation" href="#CURAC13_Kurz">(Kurz et al., 2013)</a>.</p>
+
+<p><img src="../images/research/camerasystem_img_2565.jpg" width="200" /></p>
+
+<h1 id="heart-surface-reconstruction">Heart Surface Reconstruction</h1>
+<p>For the purpose of beating heart tracking as well as three-dimensional image stabilization, an accurate 3D reconstruction of the heart surface is essential. However, this is a fairly tricky problem due to the constant movement and elastic deformation of the heart surface. Thus, classical algorithms that assume a rigid surface are not applicable. Furthermore, it is desirable to combine information from color cameras (which is usually fairly accurate, but not very dense, and can be affected by specular reflections) and information from depth cameras (which tends to be less accurate, but more dense and more robust with respect to specular reflections). For this reason, I proposed a novel algorithm on recursive surface tracking using a combination of depth and color information <a class="citation" href="#Fusion13_Kurz">(Kurz &amp; Hanebeck, 2013)</a>, <a class="citation" href="#JAIF14_Kurz">(Kurz &amp; Hanebeck, 2014)</a>.</p>
+
+<p><img src="../image/research/../../images/research/phase1.png" width="300" /></p>
+
+<h1 id="heart-phase-estimation">Heart Phase Estimation</h1>
+<p>The idea of heart phase estimation is to condense the state of a complex dynamic system such as the beating heart into a single quantity, the phase. The intuitive meaning of the phase is the answer to the question how much of the current heart beat has already passed. Because phase is a periodic quantity, I employ an estimator based on <a href="/research-directionalstatistics/">Directional Statistics</a> <a class="citation" href="#Fusion15_Kurz">(Kurz &amp; Hanebeck, 2015)</a>.</p>
+
+<h1 id="multiple-target-marker-tracking">Multiple-target Marker Tracking</h1>
+<p>In order to simplify tracking of the heart surface, we place artificial landmarks on the beating heart. These landmarks can easily be located using computer vision algorithms due to their distinct color. However, all artificial landmarks look identical, so they cannot be distinguished. This creates an assignment problem as it is common in the field of multiple target tracking.</p>
+
+<p><img src="../images/research/mtt_problem-1.png" width="300" />
+<img src="../images/research/mtt_problem-2.png" width="300" /></p>
+
+<p>To address this problem, I devised a multiple target tracking method using an algorithm based on the Kernel-SME idea originally proposed by Marcus Baum <a class="citation" href="#SAM14_Kurz">(Kurz et al., 2014)</a>.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><span id="CURAC12_Kurz">Kurz, G., &amp; Hanebeck, U. D. (2012, November). Image Stabilization with Model-Based Tracking for Beating Heart Surgery. <i>11. Jahrestagung Der Deutschen Gesellschaft Für Computer- Und Roboterassistierte Chirurgie (CURAC12)</i>.</span></li>
+<li><span id="Fusion14_Kurz">Kurz, G., &amp; Hanebeck, U. D. (2014, July). 2D and 3D Image Stabilization for Robotic Beating Heart Surgery. <i>Proceedings of the 17th International Conference on Information Fusion (Fusion 2014)</i>.</span></li>
+<li><span id="CURAC14_Kurz">Kurz, G., Foley, G., Hegedus, P., Szabo, G., &amp; Hanebeck, U. D. (2014, September). Evaluation of Image Stabilization Methods in Robotic Beating Heart Surgery. <i>13. Jahrestagung Der Deutschen Gesellschaft Für Computer- Und Roboterassistierte Chirurgie (CURAC14)</i>.</span></li>
+<li><span id="CURAC13_Kurz">Kurz, G., Hegedus, P., Szabo, G., &amp; Hanebeck, U. D. (2013, November). Experimental Evaluation of Kinect and Inertial Sensors for Beating Heart Tracking. <i>12. Jahrestagung Der Deutschen Gesellschaft Für Computer- Und Roboterassistierte Chirurgie (CURAC13)</i>.</span></li>
+<li><span id="Fusion13_Kurz">Kurz, G., &amp; Hanebeck, U. D. (2013, July). Recursive Fusion of Noisy Depth and Position Measurements for Surface Reconstruction. <i>Proceedings of the 16th International Conference on Information Fusion (Fusion 2013)</i>.</span></li>
+<li><span id="JAIF14_Kurz">Kurz, G., &amp; Hanebeck, U. D. (2014). Dynamic Surface Reconstruction by Recursive Fusion of Depth and Position Measurements. <i>Journal of Advances in Information Fusion</i>, <i>9</i>(1), 13–26. http://confcats_isif.s3.amazonaws.com/web-files/journals/entries/427_1_art_6_19271%5B1%5D.pdf</span></li>
+<li><span id="Fusion15_Kurz">Kurz, G., &amp; Hanebeck, U. D. (2015, July). Heart Phase Estimation Using Directional Statistics for Robotic Beating Heart Surgery. <i>Proceedings of the 18th International Conference on Information Fusion (Fusion 2015)</i>.</span></li>
+<li><span id="SAM14_Kurz">Kurz, G., Baum, M., &amp; Hanebeck, U. D. (2014, June). Real-time Kernel-based Multiple Target Tracking for Robotic Beating Heart Surgery. <i>Proceedings of the Eighth IEEE Sensor Array and Multichannel Signal Processing Workshop (SAM 2014)</i>.</span></li></ol>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <!-- <h2 class="footer-heading">Homepage of Gerhard Kurz</h2> -->
+    © Gerhard Kurz
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name"><!-- Homepage of Gerhard Kurz--></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

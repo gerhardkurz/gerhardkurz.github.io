@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Homepage of Gerhard Kurz</title>
+<meta name="generator" content="Jekyll v4.3.1" />
+<meta property="og:title" content="Homepage of Gerhard Kurz" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://gerhardkurz.github.io/research-directionalstatistics/" />
+<meta property="og:url" content="https://gerhardkurz.github.io/research-directionalstatistics/" />
+<meta property="og:site_name" content="Homepage of Gerhard Kurz" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Homepage of Gerhard Kurz" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Homepage of Gerhard Kurz","url":"https://gerhardkurz.github.io/research-directionalstatistics/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://gerhardkurz.github.io/feed.xml" title="Homepage of Gerhard Kurz" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Homepage of Gerhard Kurz</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/code/">Code</a><a class="page-link" href="/publications/">Publications</a><a class="page-link" href="/research/">Research</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    <p>Directional statistics is a subfield of statistics where we consider directional quantities, for example, angles, orientations, phase, etc.</p>
+
+<p>To illustrate the need for a special type of statistics in these scenarios consider the following example. If we want to compute the average of two angles, say 20° and 340°, taking the usual mean yields \(\frac{20^\circ + 340^\circ}{2} = 180^\circ\). However, the correct result is 0°, the circular mean, which is the exact opposite direction!</p>
+
+<p><img src="../images/research/circularmean.png" width="500" /></p>
+
+<h1 id="circular-statistics">Circular Statistics</h1>
+<p>The most fundamental domain in directional statistics is the unit circle. It is of interest when considering periodic quantities such as angles or phase.</p>
+
+<figure style="float:right;">
+  <img src="../images/research/wn.png" alt="wn" width="300" />
+  <figcaption>Wrapped normal distribution.</figcaption>
+</figure>
+
+<p>Popular probability distributions on the unit circle include the <em>von Mises distribution</em> \(c \cdot \exp(\kappa \cos(x-\mu))\) and the <em>wrapped normal distribution</em> \(\sum_{k=-\infty}^\infty \mathcal{N}(x + 2 k \pi; \mu, \sigma)\). I have investigated some of their properties in <a class="citation" href="#TAES15_Kurz">(Kurz &amp; Hanebeck, 2015)</a> and <a class="citation" href="#SDF14_Kurz">(Kurz et al., 2014)</a>.</p>
+
+<h2 id="circular-estimation">Circular Estimation</h2>
+<p>I am interested in developing recursive filters for estimation of circular quantities, similar to the well-known Kalman filter as well as its nonlinear extensions such as the unscented Kalman filter (UKF).</p>
+
+<ul>
+  <li>Nonlinear prediction <a class="citation" href="#ACC13_Kurz">(Kurz et al., 2013)</a></li>
+  <li>Nonlinear measurement update <a class="citation" href="#ACC14_Kurz">(Kurz et al., 2014)</a>, <a class="citation" href="#Fusion15_Gilitschenski">(Gilitschenski et al., 2015)</a></li>
+  <li>Generalization to non-additive noise <a class="citation" href="#AES16_Kurz">(Kurz et al., 2016)</a></li>
+  <li>Fourier-based approach <a class="citation" href="#Fusion15_Pfaff">(Pfaff et al., 2015)</a>, <a class="citation" href="#Fusion16_Pfaff">(Pfaff et al., 2016)</a></li>
+  <li>Discrete approach <a class="citation" href="#MFI16_Kurz">(Kurz et al., 2016)</a></li>
+</ul>
+
+<figure style="float:right;">
+  <img src="../images/research/detsampling.png" alt="wn" width="300" />
+  <figcaption>Deterministic sampling.</figcaption>
+</figure>
+
+<h2 id="deterministic-sampling">Deterministic Sampling</h2>
+<p>An important tool for nonlinear filtering is <em>deterministic sampling</em>. The idea is to choose a number of samples that are representative of a continuous probability density. Working with a set of samples is usually much easier than working with a continuous density. In contrast to <em>stochastic sampling</em>, usually a much smaller number of samples is sufficient.</p>
+
+<p>I have published the following deterministic sampling approaches on the unit circle.</p>
+
+<ul>
+  <li>Based on first trigonometric moment <a class="citation" href="#ACC13_Kurz">(Kurz et al., 2013)</a></li>
+  <li>Based on second trigonometric moment <a class="citation" href="#Fusion14_KurzGilitschenski">(Kurz et al., 2014)</a>, <a class="citation" href="#JAIF16_Kurz">(Kurz et al., 2016)</a></li>
+  <li>Based on a binary tree <a class="citation" href="#JAIF16_Kurz">(Kurz et al., 2016)</a></li>
+  <li>Based on quantization <a class="citation" href="#Fusion16_Gilitschenski">(Gilitschenski et al., 2016)</a></li>
+</ul>
+
+<h2 id="applications">Applications</h2>
+<p>Circular statistics has many applications in fields ranging from signal processing to robotics, from geology to medicine, and from neuroscience to computational biology.</p>
+
+<p>During my work on circular statistics, I have published results about application of the developed techniques in the following circumstances.</p>
+
+<ul>
+  <li>Sensor scheduling for bearings-only measurements <a class="citation" href="#Fusion13_Gilitschenski">(Gilitschenski et al., 2013)</a></li>
+  <li>Constrained object tracking <a class="citation" href="#IPIN13_Kurz">(Kurz et al., 2013)</a></li>
+  <li>Model-predictive control on the unit circle <a class="citation" href="#ACC15_Kurz">(Kurz et al., 2015)</a></li>
+  <li>Heart phase estimation <a class="citation" href="#Fusion15_Kurz">(Kurz &amp; Hanebeck, 2015)</a></li>
+  <li>Optical Belt Sorting <a class="citation" href="#MFI17_Pfaff">(Pfaff et al., 2017)</a></li>
+</ul>
+
+<h1 id="spherical-statistics">Spherical Statistics</h1>
+<p>Spherical statistics considers quantities on the unit sphere rather than the unit circle. More generally, the unit hypersphere, i.e., the sphere in \(n\) dimensions, can be considered.</p>
+
+<figure style="float:right;">
+  <img src="../images/research/bingham.png" alt="wn" width="200" />
+  <figcaption>Bingham distribution.</figcaption>
+</figure>
+
+<h2 id="bingham-distribution">Bingham Distribution</h2>
+<p>The <em>Bingham distribution</em> is given by \(c \cdot \exp(\underline{x}^T \mathbf{M} \mathbf{Z} \mathbf{M}^T \underline{x})\), where \(\underline{x}\) is located on the unit hypersphere, \(\mathbf{M}\) is an orthogonal matrix, and \(\mathbf{Z}\) is a diagonal matrix. This distribution is antipodally symmetric, that is, \(x\) and \(-x\) always have the same probability. Thus, it can be conveniently applied to <em>quaternions</em>, which can be used to represent rotations in the three-dimensional space \(\mathbb{R}^3\).</p>
+
+<p>The following publications contain my work on the Bingham distribution.</p>
+
+<ul>
+  <li>Recursive filter for the 2D case <a class="citation" href="#Fusion13_KurzBingham">(Kurz et al., 2013)</a></li>
+  <li>Recursive filter for the 4D case (for quaternions) <a class="citation" href="#JAIF14_KurzBingham">(Kurz et al., 2014)</a></li>
+  <li>Normalization constant <a class="citation" href="#MFI14_Gilitschenski">(Gilitschenski et al., 2014)</a></li>
+  <li>Deterministic sampling <a class="citation" href="#TAC16_Gilitschenski">(Gilitschenski et al., 2016)</a></li>
+</ul>
+
+<figure style="float:right;">
+  <img src="../images/research/vmf.png" alt="wn" width="200" />
+  <figcaption>von Mises-Fisher distribution.</figcaption>
+</figure>
+
+<h2 id="von-mises-fisher-distribution">von Mises-Fisher Distribution</h2>
+<p>Another distribution on the unit sphere is the <em>von Mises-Fisher distribution</em>, a generalization of the von Mises distribution on the unit circle. It is given by \(c \cdot \exp(\kappa \underline{\mu}^T \underline{x})\), where \(\kappa &gt; 0\) and \(\underline{\mu}\) as well as \(\underline{x}\) are unit vectors.</p>
+
+<p>I have published these results on the von Mises-Fisher distribution.</p>
+
+<ul>
+  <li>Stochastic sampling <a class="citation" href="#SDF15_Kurz">(Kurz &amp; Hanebeck, 2015)</a></li>
+  <li>Deterministic sampling and nonlinear filtering <a class="citation" href="#SPL16_Kurz">(Kurz et al., 2016)</a></li>
+  <li>Parameter estimation <a class="citation" href="#Fusion16_Kurz">(Kurz et al., 2016)</a></li>
+</ul>
+
+<figure style="float:right;">
+  <img src="../images/research/bwn.png" alt="wn" width="200" />
+  <figcaption>Bivariate wrapped normal distribution.</figcaption>
+</figure>
+
+<h2 id="spherical-harmonics">Spherical Harmonics</h2>
+<p>Similar to approximations based on Fourier series on the unit circle, it is possible to approximate probability densities on the unit sphere using so-called <em>spherical harmonics</em>. This way, arbitrary multimodal spherical distributions can be considered.</p>
+
+<ul>
+  <li>Recursive spherical filter based on spherical harmonics <a class="citation" href="#MFI17_PfaffSphericalHarmonics">(Pfaff et al., 2017)</a></li>
+</ul>
+
+<h1 id="toroidal-statistics">Toroidal Statistics</h1>
+<p>While estimation of a single angle is possible with circular statistics, estimating multiple angles at the same time requires <em>toroidal statistics</em>. The key questions is how correlations between these angles can be modeled appropriately. For this purpose, circular-circular correlation coefficients can be used.</p>
+
+<p>In my work, I have investigated the bivariate wrapped normal distribution, a generalization of the wrapped normal distribution on the unit circle to higher dimensions, as well as the bivariate von Mises distribution.</p>
+
+<ul>
+  <li>Recursive filtering using the bivariate wrapped normal distribution <a class="citation" href="#CDC14_Kurz">(Kurz et al., 2014)</a>, <a class="citation" href="#Fusion17_Kurz">(Kurz et al., 2017)</a></li>
+  <li>Parameter estimation for the bivariate wrapped normal distribution <a class="citation" href="#CDC15_Kurz">(Kurz &amp; Hanebeck, 2015)</a></li>
+  <li>Fusion using the bivariate von Mises distribution (with matrix parameter) <a class="citation" href="#MFI15_Kurz">(Kurz &amp; Hanebeck, 2015)</a></li>
+  <li>Deterministic sampling on the torus <a class="citation" href="#TAES17_Kurz">(Kurz &amp; Hanebeck, 2017)</a></li>
+  <li>Fourier-based hypertoroidal filtering <a class="citation" href="#JAIF16_Pfaff">(Pfaff et al., 2016)</a></li>
+</ul>
+
+<figure style="float:right;">
+  <img src="../images/research/pwn.png" alt="wn" width="200" />
+  <figcaption>Partially wrapped normal distribution.</figcaption>
+</figure>
+
+<h1 id="circuar-linear-statistics">Circuar-linear Statistics</h1>
+<p>Whereas toroidal statistics considers multiple periodic quantities, circular-linear statistics deals with combinations of periodic and nonperiodic quantities, for example orientation and position. Here, the key questions is how to model the correlation between circular and linear quantities. Among the most important applications of circular-linear statistics are problems on SE(2) and SE(3), the groups of rigid body motions in 2D and 3D, respectively.</p>
+
+<ul>
+  <li>Partially wrapped normal distribution <a class="citation" href="#MFI14_Kurz">(Kurz et al., 2014)</a></li>
+  <li>SE(2) Bingham <a class="citation" href="#Fusion14_GilitschenskiKurz">(Gilitschenski et al., 2014)</a>, (missing reference), <a class="citation" href="#FUSION18_LiSE2">(Li et al., 2018)</a></li>
+  <li>SE(2) using discretization of circle <a class="citation" href="#TII18_Kurz">(Kurz et al., 2018)</a></li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><span id="TAES15_Kurz">Kurz, G., &amp; Hanebeck, U. D. (2015). Trigonometric Moment Matching and Minimization of the Kullback–Leibler Divergence. <i>IEEE Transactions on Aerospace and Electronic Systems</i>, <i>51</i>(1), 3480–3484. https://doi.org/10.1109/TAES.2015.150406</span></li>
+<li><span id="SDF14_Kurz">Kurz, G., Gilitschenski, I., &amp; Hanebeck, U. D. (2014, October). Efficient Evaluation of the Probability Density Function of a Wrapped Normal Distribution. <i>Proceedings of the IEEE ISIF Workshop on Sensor Data Fusion: Trends, Solutions, Applications (SDF 2014)</i>.</span></li>
+<li><span id="ACC13_Kurz">Kurz, G., Gilitschenski, I., &amp; Hanebeck, U. D. (2013, June). Recursive Nonlinear Filtering for Angular Data Based on Circular Distributions. <i>Proceedings of the 2013 American Control Conference (ACC 2013)</i>.</span></li>
+<li><span id="ACC14_Kurz">Kurz, G., Gilitschenski, I., &amp; Hanebeck, U. D. (2014, June). Nonlinear Measurement Update for Estimation of Angular Systems Based on Circular Distributions. <i>Proceedings of the 2014 American Control Conference (ACC 2014)</i>.</span></li>
+<li><span id="Fusion15_Gilitschenski">Gilitschenski, I., Kurz, G., &amp; Hanebeck, U. D. (2015, July). Non-Identity Measurement Models for Orientation Estimation Based on Directional Statistics. <i>Proceedings of the 18th International Conference on Information Fusion (Fusion 2015)</i>.</span></li>
+<li><span id="AES16_Kurz">Kurz, G., Gilitschenski, I., &amp; Hanebeck, U. D. (2016). Recursive Bayesian Filtering in Circular State Spaces. <i>IEEE Aerospace and Electronic Systems Magazine</i>, <i>31</i>(3), 70–87. https://doi.org/10.1109/MAES.2016.150083</span></li>
+<li><span id="Fusion15_Pfaff">Pfaff, F., Kurz, G., &amp; Hanebeck, U. D. (2015, July). Multimodal Circular Filtering Using Fourier Series. <i>Proceedings of the 18th International Conference on Information Fusion (Fusion 2015)</i>.</span></li>
+<li><span id="Fusion16_Pfaff">Pfaff, F., Kurz, G., &amp; Hanebeck, U. D. (2016, July). Nonlinear Prediction for Circular Filtering Using Fourier Series. <i>Proceedings of the 19th International Conference on Information Fusion (Fusion 2016)</i>.</span></li>
+<li><span id="MFI16_Kurz">Kurz, G., Pfaff, F., &amp; Hanebeck, U. D. (2016, September). Discrete Recursive Bayesian Filtering on Intervals and the Unit Circle. <i>Proceedings of the 2016 IEEE International Conference on Multisensor Fusion and Integration for Intelligent Systems (MFI 2016)</i>.</span></li>
+<li><span id="Fusion14_KurzGilitschenski">Kurz, G., Gilitschenski, I., &amp; Hanebeck, U. D. (2014, July). Deterministic Approximation of Circular Densities with Symmetric Dirac Mixtures Based on Two Circular Moments. <i>Proceedings of the 17th International Conference on Information Fusion (Fusion 2014)</i>.</span></li>
+<li><span id="JAIF16_Kurz">Kurz, G., Gilitschenski, I., Siegwart, R. Y., &amp; Hanebeck, U. D. (2016). Methods for Deterministic Approximation of Circular Densities. <i>Journal of Advances in Information Fusion</i>, <i>11</i>(2), 138–156.</span></li>
+<li><span id="Fusion16_Gilitschenski">Gilitschenski, I., Kurz, G., Hanebeck, U. D., &amp; Siegwart, R. (2016, July). Optimal Quantization of Circular Distributions. <i>Proceedings of the 19th International Conference on Information Fusion (Fusion 2016)</i>.</span></li>
+<li><span id="Fusion13_Gilitschenski">Gilitschenski, I., Kurz, G., &amp; Hanebeck, U. D. (2013, July). Bearings-Only Sensor Scheduling Using Circular Statistics. <i>Proceedings of the 16th International Conference on Information Fusion (Fusion 2013)</i>.</span></li>
+<li><span id="IPIN13_Kurz">Kurz, G., Faion, F., &amp; Hanebeck, U. D. (2013, October). Constrained Object Tracking on Compact One-dimensional Manifolds Based on Directional Statistics. <i>Proceedings of the Fourth IEEE GRSS International Conference on Indoor Positioning and Indoor Navigation (IPIN 2013)</i>.</span></li>
+<li><span id="ACC15_Kurz">Kurz, G., Dolgov, M., &amp; Hanebeck, U. D. (2015, July). Nonlinear Stochastic Model Predictive Control in the Circular Domain. <i>Proceedings of the 2015 American Control Conference (ACC 2015)</i>.</span></li>
+<li><span id="Fusion15_Kurz">Kurz, G., &amp; Hanebeck, U. D. (2015, July). Heart Phase Estimation Using Directional Statistics for Robotic Beating Heart Surgery. <i>Proceedings of the 18th International Conference on Information Fusion (Fusion 2015)</i>.</span></li>
+<li><span id="MFI17_Pfaff">Pfaff, F., Kurz, G., Pieper, C., Maier, G., Noack, B., Kruggel-Emden, H., Gruna, R., Hanebeck, U. D., Wirtz, S., Scherer, V., Laengle, T., &amp; Beyerer, J. (2017, November). Improving Multitarget Tracking Using Orientation Estimates for Sorting Bulk Materials. <i>Proceedings of the 2017 IEEE International Conference on Multisensor Fusion and Integration for Intelligent Systems (MFI 2017)</i>.</span></li>
+<li><span id="Fusion13_KurzBingham">Kurz, G., Gilitschenski, I., Julier, S. J., &amp; Hanebeck, U. D. (2013, July). Recursive Estimation of Orientation Based on the Bingham Distribution. <i>Proceedings of the 16th International Conference on Information Fusion (Fusion 2013)</i>.</span></li>
+<li><span id="JAIF14_KurzBingham">Kurz, G., Gilitschenski, I., Julier, S., &amp; Hanebeck, U. D. (2014). Recursive Bingham Filter for Directional Estimation Involving 180 Degree Symmetry. <i>Journal of Advances in Information Fusion</i>, <i>9</i>(2), 90–105. http://confcats_isif.s3.amazonaws.com/web-files/journals/entries/431_2_art_10_2559_1.pdf</span></li>
+<li><span id="MFI14_Gilitschenski">Gilitschenski, I., Kurz, G., Julier, S. J., &amp; Hanebeck, U. D. (2014, September). Efficient Bingham Filtering based on Saddlepoint Approximations. <i>Proceedings of the 2014 IEEE International Conference on Multisensor Fusion and Information Integration (MFI 2014)</i>.</span></li>
+<li><span id="TAC16_Gilitschenski">Gilitschenski, I., Kurz, G., Julier, S. J., &amp; Hanebeck, U. D. (2016). Unscented Orientation Estimation Based on the Bingham Distribution. <i>IEEE Transactions on Automatic Control</i>, <i>61</i>(1), 172–177. https://doi.org/10.1109/TAC.2015.2423831</span></li>
+<li><span id="SDF15_Kurz">Kurz, G., &amp; Hanebeck, U. D. (2015, October). Stochastic Sampling of the Hyperspherical von Mises–Fisher Distribution Without Rejection Methods. <i>Proceedings of the IEEE ISIF Workshop on Sensor Data Fusion: Trends, Solutions, Applications (SDF 2015)</i>.</span></li>
+<li><span id="SPL16_Kurz">Kurz, G., Gilitschenski, I., &amp; Hanebeck, U. D. (2016). Unscented von Mises-Fisher Filtering. <i>IEEE Signal Processing Letters</i>, <i>23</i>(4), 463–467. https://doi.org/10.1109/LSP.2016.2529854</span></li>
+<li><span id="Fusion16_Kurz">Kurz, G., Pfaff, F., &amp; Hanebeck, U. D. (2016, July). Kullback-Leibler Divergence and Moment Matching for Hyperspherical Probability Distributions. <i>Proceedings of the 19th International Conference on Information Fusion (Fusion 2016)</i>.</span></li>
+<li><span id="MFI17_PfaffSphericalHarmonics">Pfaff, F., Kurz, G., &amp; Hanebeck, U. D. (2017, November). Filtering on the Unit Sphere Using Spherical Harmonics. <i>Proceedings of the 2017 IEEE International Conference on Multisensor Fusion and Integration for Intelligent Systems (MFI 2017)</i>.</span></li>
+<li><span id="CDC14_Kurz">Kurz, G., Gilitschenski, I., Dolgov, M., &amp; Hanebeck, U. D. (2014, December). Bivariate Angular Estimation Under Consideration of Dependencies Using Directional Statistics. <i>Proceedings of the 53rd IEEE Conference on Decision and Control (CDC 2014)</i>.</span></li>
+<li><span id="Fusion17_Kurz">Kurz, G., Pfaff, F., &amp; Hanebeck, U. D. (2017, July). Nonlinear Toroidal Filtering Based on Bivariate Wrapped Normal Distributions. <i>Proceedings of the 20th International Conference on Information Fusion (Fusion 2017)</i>.</span></li>
+<li><span id="CDC15_Kurz">Kurz, G., &amp; Hanebeck, U. D. (2015, December). Parameter Estimation for the Bivariate Wrapped Normal Distribution. <i>Proceedings of the 54th IEEE Conference on Decision and Control (CDC 2015)</i>.</span></li>
+<li><span id="MFI15_Kurz">Kurz, G., &amp; Hanebeck, U. D. (2015, September). Toroidal Information Fusion Based on the Bivariate von Mises Distribution. <i>Proceedings of the 2015 IEEE International Conference on Multisensor Fusion and Integration for Intelligent Systems (MFI 2015)</i>.</span></li>
+<li><span id="TAES17_Kurz">Kurz, G., &amp; Hanebeck, U. D. (2017). Deterministic Sampling on the Torus for Bivariate Circular Estimation. <i>IEEE Transactions on Aerospace and Electronic Systems</i>, <i>53</i>(1), 530–534. https://doi.org/10.1109/TAES.2017.2650079</span></li>
+<li><span id="JAIF16_Pfaff">Pfaff, F., Kurz, G., &amp; Hanebeck, U. D. (2016). Multivariate Angular Filtering Using Fourier Series. <i>Journal of Advances in Information Fusion</i>, <i>11</i>(2), 206–226.</span></li>
+<li><span id="MFI14_Kurz">Kurz, G., Gilitschenski, I., &amp; Hanebeck, U. D. (2014, September). The Partially Wrapped Normal Distribution for SE(2) Estimation. <i>Proceedings of the 2014 IEEE International Conference on Multisensor Fusion and Information Integration (MFI 2014)</i>.</span></li>
+<li><span id="Fusion14_GilitschenskiKurz">Gilitschenski, I., Kurz, G., Julier, S. J., &amp; Hanebeck, U. D. (2014, July). A New Probability Distribution for Simultaneous Representation of Uncertain Position and Orientation. <i>Proceedings of the 17th International Conference on Information Fusion (Fusion 2014)</i>.</span></li>
+<li><span id="FUSION18_LiSE2">Li, K., Kurz, G., Bernreiter, L., &amp; Hanebeck, U. D. (2018, July). Nonlinear Progressive Filtering for SE(2) Estimation. <i>Proceedings of the 21st International Conference on Information Fusion (Fusion 2018)</i>.</span></li>
+<li><span id="TII18_Kurz">Kurz, G., Pfaff, F., &amp; Hanebeck, U. D. (2018). Application of Discrete Recursive Bayesian Estimation on Intervals and the Unit Circle to Filtering on SE(2). <i>IEEE Transactions on Industrial Informatics</i>, <i>14</i>(3), 1197–1206. https://doi.org/10.1109/TII.2017.2757011</span></li></ol>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <!-- <h2 class="footer-heading">Homepage of Gerhard Kurz</h2> -->
+    © Gerhard Kurz
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name"><!-- Homepage of Gerhard Kurz--></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
