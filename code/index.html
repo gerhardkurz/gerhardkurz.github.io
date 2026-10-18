@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]}
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -91,11 +98,17 @@
       <li>MATLAB-wrapper for the C implementation by Jared Glover in libBingham</li>
     </ul>
   </li>
+  <li><a href="https://github.com/gerhardkurz/aisrt">https://github.com/gerhardkurz/aisrt</a>
+    <ul>
+      <li>use AI to autogenerate and translate subtitles for video files</li>
+      <li>GUI with batch processing support</li>
+    </ul>
+  </li>
 </ul>
 
 <h1 id="references">References</h1>
 
-<ol class="bibliography"><li><span id="JSS17_Kurz">Kurz, G., Gilitschenski, I., Pfaff, F., Drude, L., Hanebeck, U., Haeb-Umbach, R., &amp; Siegwart, R. (2019). Directional Statistics and Filtering Using libDirectional. <i>Journal of Statistical Software, Articles</i>, <i>89</i>(4), 1–31. https://doi.org/10.18637/jss.v089.i04</span></li></ol>
+<ol class="bibliography"><li><span id="JSS17_Kurz">Kurz, G., Gilitschenski, I., Pfaff, F., Drude, L., Hanebeck, U. D., Haeb-Umbach, R., &amp; Siegwart, R. Y. (2019). Directional Statistics and Filtering Using libDirectional. <i>Journal of Statistical Software</i>, <i>89</i>(4), 1–31. https://doi.org/10.18637/jss.v089.i04</span></li></ol>
 
   </div>
 

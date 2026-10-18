@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]}
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,18 +46,22 @@
       <div class="wrapper">
         <div class="home"><h1 id="gerhard-kurz">Gerhard Kurz</h1>
 
-<p><img src="../images/img_9213.jpg" alt="Gerhard Kurz" width="100" style="float:right" />
+<p><img src="../images/DSC05187_small.jpg" alt="Gerhard Kurz" width="100" style="float:right" />
 I am a robotics researcher at Bosch Corporate Research. Previously, I was at the Institute for Anthropomatics and Robotics at the Karlsruhe Institute of Technology (KIT). Here, you can read about me and about my research, in particular on the topics of directional statistics, robotic beating heart surgery, and SLAM.</p>
 
 <h1 id="highlights">Highlights</h1>
 
 <p><a href="/research-directionalstatistics/">Directional Statistics</a>: Probability distributions on manifolds and estimation methods based on these distributions.</p>
 
-<p><img src="../images/research/vmf.png" height="200" /> <img src="../images/research/bwn.png" height="200" /></p>
+<div style="text-align: center;">
+<img src="../images/research/vmf.png" height="200" /> <img src="../images/research/bwn.png" height="200" />
+</div>
 
 <p><a href="/research-roboticbeatingheartsurgery/">Robotic Beating Heart Surgery</a>: How to use robotics to assist a surgeon in beating heart surgery using motion compensation.</p>
 
-<p><img src="../images/research/imagestab_problem.png" height="200" /></p>
+<div style="text-align: center;">
+<img src="../images/research/imagestab_problem.png" height="200" />
+</div>
 
 <p><a href="/research/">SLAM</a>: How to extend mapping and localization algorithms to address real-world challenges in areas such as lifelong SLAM.</p>
 <h2 class="post-list-heading">Posts</h2>
